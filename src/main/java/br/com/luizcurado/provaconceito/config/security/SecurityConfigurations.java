@@ -58,6 +58,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 		.antMatchers(HttpMethod.GET, "/produtos/**").permitAll()
 		.antMatchers(HttpMethod.POST, "/auth").permitAll()
 		.antMatchers(HttpMethod.GET, "/actuator/**").permitAll()
+		.antMatchers(HttpMethod.GET, "/swagger-ui.html").permitAll()
 		
 		// Restringe o acesso aos outros endpoints a usuários autenticados
 		.anyRequest().authenticated()

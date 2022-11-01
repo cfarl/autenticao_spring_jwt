@@ -20,10 +20,12 @@ public class SwaggerConfigurations {
 	public Docket forumApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("br.com.alura.forum"))
+				// Procura os endpoint para o swagger no pacote informado
+				.apis(RequestHandlerSelectors.basePackage("br.com.luizcurado"))
 				.paths(PathSelectors.ant("/**"))
 				.build()
 				.ignoredParameterTypes(Usuario.class)
+				// Adiciona campo para informar Authorization no header da requisição
 				.globalOperationParameters(Arrays.asList(
 						new ParameterBuilder()
 						.name("Authorization")

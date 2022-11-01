@@ -12,13 +12,6 @@ public class DadosLoginDTO {
 	//----------------------------------------
 	private String email;
 	private String senha;
-
-	//-----------------------------------------------------------------
-	/** Converte o DTO para um objeto usado pelo Spring Security */
-	//-----------------------------------------------------------------
-	public UsernamePasswordAuthenticationToken converter() {
-		return new UsernamePasswordAuthenticationToken(email, senha);
-	}	
 	
 	//----------------------------------------
 	// Métodos get/set

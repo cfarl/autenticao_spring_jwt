@@ -44,7 +44,7 @@ public class AutenticacaoComGeracaoTokenController {
 	@PostMapping
 	public ResponseEntity<TokenDto> autenticar(@RequestBody @Valid DadosLoginDTO dadosLoginDTO) {
 		// Recupera usuário e senha, na forma de um DTO do Spring Security
-		UsernamePasswordAuthenticationToken dadosLoginSpringSecurity = dadosLoginDTO.converter();
+		UsernamePasswordAuthenticationToken dadosLoginSpringSecurity = new UsernamePasswordAuthenticationToken(dadosLoginDTO.getEmail(), dadosLoginDTO.getSenha());
 		
 		try {
 			// Faz a autenticacao do usuário, chamando o AutenticacaoService, que implementa UserDetailsService

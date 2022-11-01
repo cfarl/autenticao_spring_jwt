@@ -59,4 +59,8 @@ Como usar essa aplicação:
 - Endereço chamado: http://localhost:8080/produtos/2
 
 - Campo enviado no header: 
-	Authorization: Bearer eyJhbGciOiJIUzI1N... (token)  
+	Authorization: Bearer eyJhbGciOiJIUzI1N... (token) 
+	
+8) Você pode testar os endpoints no swagger, usando o seguinte endereço:
+
+   http://localhost:8080/swagger-ui.html#/	 

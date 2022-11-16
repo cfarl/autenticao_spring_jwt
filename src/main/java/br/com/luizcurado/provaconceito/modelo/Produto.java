@@ -24,6 +24,20 @@ public class Produto {
 	@Column(name="nome_produto")
 	private String nome;
 	
+	
+	//--------------------------------------------------------
+	/** Construtor, recebe id e nome do produto */
+	//--------------------------------------------------------
+	public Produto(Long id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
+
+	//--------------------------------------------------------
+	/** Construtor default */
+	//--------------------------------------------------------
+	public Produto() {}
+
 	//--------------------------------------------------------
 	// Métodos get/set
 	//--------------------------------------------------------
@@ -42,4 +56,11 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", nome=" + nome + "]";
+	}
+	
+	
 }
